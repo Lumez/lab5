@@ -9,9 +9,7 @@
 	<!-- car list -->
 	<div id="car-list" class="row">
 		
-		<!-- =========================== -->
-		<!-- PART 2 CAR LIST PLACEHOLDER -->
-		<!-- =========================== -->
+		<?php print_r($_GET["id"]); ?>
 		
 	</div><!-- /car list -->
 	
