@@ -22,7 +22,20 @@
 			$cars = $db->query("SELECT * FROM car WHERE manufacturer_id={$_GET["id"]}");
 			
 			while($car = $cars->fetch_object("Car")) {
-				print_r($car);
+				echo "<div class=\"car-item\">";
+				
+				echo "<div class=\"row\">";
+				echo "<div class=\"col-md-6\"><h3>{$car->model}</h3></div>";
+				echo "</div>";
+				
+				echo "<div class=\"row\">";
+				echo "<div class=\"col-md-4\"><strong>{$car->regDate} ({$car->regNumber})</strong></div>";
+				echo "<div class=\"col-md-6\" style=\"text-align: right;\"><strong>&pound;{$car->price}</strong></div>";
+				echo "</div>";
+				
+				echo $car->description;
+				
+				echo "</div>";
 			}
 		?>
 		

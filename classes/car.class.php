@@ -8,6 +8,6 @@ class Car
 	public $description;
 	public $price;
 	public $regNumber;
-	public $regYear;
+	public $regDate;
 }
 ?>
