@@ -7,8 +7,7 @@
 	<?php 
 		require('includes/db.php');
 			
-		$manufacturers = $db->query("SELECT * FROM manufacturer WHERE id={$_GET["id"]}");
-		
+		$manufacturers = $db->query("SELECT * FROM manufacturer WHERE id={$_GET["id"]}");	
 		$manufacturer = $manufacturers->fetch_object();
 		echo "<h2>See all cars we have available from {$manufacturer->name}</h2>";		
 	?>
@@ -22,6 +21,9 @@
 			$cars = $db->query("SELECT * FROM car WHERE manufacturer_id={$_GET["id"]}");
 			
 			while($car = $cars->fetch_object("Car")) {
+				$colours = $db->query("SELECT * FROM colour WHERE id={$car->colour_id}");
+				$colour = $colours->fetch_object();
+				
 				echo "<div class=\"car-item\">";
 				
 				echo "<div class=\"row\">";
@@ -34,6 +36,8 @@
 				echo "</div>";
 				
 				echo "<p>{$car->description}</p>";
+				
+				echo "<p>Colour: <strong>{$colour->name}</strong></p>";
 				
 				echo "</div>";
 			}
