@@ -33,7 +33,7 @@
 				echo "<div class=\"col-md-6\" style=\"text-align: right;\"><strong>&pound;{$car->price}</strong></div>";
 				echo "</div>";
 				
-				echo $car->description;
+				echo "<p>{$car->description}</p>";
 				
 				echo "</div>";
 			}
