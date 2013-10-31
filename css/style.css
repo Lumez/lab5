@@ -82,6 +82,17 @@ h3, h4, h5 {
 }
 
 /*===================
+	Manufacturer List
+====================*/
+
+#manufacturer-list {
+	background: #FFF;
+	border: 1px solid #CCCC00;
+	margin: 15px;
+	padding: 15px;
+}
+
+/*===================
 	Footer
 ====================*/
 
