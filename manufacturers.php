@@ -8,10 +8,7 @@
 		
 	<!-- manufacturer list -->
 	<div id="manufacturer-list" class="row">
-		
-		<!-- ==================================== -->
-		<!-- PART 1 MANUFACTURER LIST PLACEHOLDER -->
-		<!-- ==================================== -->
+		<?php require('includes/db.php'); ?>
 		
 	</div><!-- /manufacturer list -->
 	
