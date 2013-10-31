@@ -12,7 +12,7 @@
 		require('includes/db.php');
 		$manufacturers = $db->query("SELECT manufacturer.id, manufacturer.name FROM manufacturer");
 		while($manufacturer = $manufacturers->fetch_object()) {
-			echo "<h3>{$manufacturer->name} - {$manufacturer->id}</h3>";
+			echo "<a href=\"show-manufacturer.php?id={$manufacturer->id}\">{$manufacturer->name}</a><br />";
 		}
 		?>
 	</div><!-- /manufacturer list -->
