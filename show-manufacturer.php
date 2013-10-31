@@ -3,8 +3,15 @@
 
 <!-- main content -->
 <div id="content" class="row">
-	
-	<h2>See all cars we have available from [MANUFACTURER NAME]</h2>
+
+	<?php 
+		require('includes/db.php');
+			
+		$manufacturers = $db->query("SELECT * FROM manufacturer WHERE id={$_GET["id"]}");
+		
+		$manufacturer = $manufacturers->fetch_object();
+		echo "<h2>See all cars we have available from {$manufacturer->name}</h2>";		
+	?>
 		
 	<!-- car list -->
 	<div id="car-list" class="row">
@@ -17,7 +24,6 @@
 			while($car = $cars->fetch_object("Car")) {
 				print_r($car);
 			}
-			
 		?>
 		
 	</div><!-- /car list -->
