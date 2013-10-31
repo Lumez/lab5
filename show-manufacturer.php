@@ -12,6 +12,12 @@
 			require('includes/db.php');
 			require('classes/car.class.php');
 			
+			$cars = $db->query("SELECT * FROM car WHERE manufacturer_id={$_GET["id"]}");
+			
+			while($car = $cars->fetch_object("Car")) {
+				print_r($car);
+			}
+			
 		?>
 		
 	</div><!-- /car list -->
